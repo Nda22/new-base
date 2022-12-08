@@ -31,9 +31,9 @@ let handler = async (m, { conn, args, usedPrefix }) => {
     }
 }
     
-handler.help = ['reme <jumlah>']
+handler.help = ['gasbgl <jumlah>']
 handler.tags = ['gt']
-handler.command = /^(reme|casino)$/i
+handler.command = /^(gasbgl)$/i
 handler.register = true
 
 handler.fail = null
