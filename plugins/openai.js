@@ -8,14 +8,10 @@ const openai = new OpenAIApi(configuration);
 
 const completion = await openai.createCompletion({
   model: "text-davinci-002",
-  prompt: "${text}",
+  prompt: text,
 });
 m.reply(completion.data.choices[0].text);
 }
 handler.command = /^(ai)$/i
 
 module.exports = handler
-
-
-
-
