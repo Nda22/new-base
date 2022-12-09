@@ -1,5 +1,6 @@
 const { Configuration, OpenAIApi } = require("openai");
-let handler = async (m, {conn, text}) => {
+let handler = async ({conn, text}) => {
+if (!text) throw `masukkan text`
 const configuration = new Configuration({
   apiKey: "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",
 });
@@ -14,3 +15,7 @@ m.reply(completion.data.choices[0].text);
 handler.command = /^(ai)$/i
 
 module.exports = handler
+
+
+
+
