@@ -15,5 +15,7 @@ const response = await openai.createCompletion({
 m.reply(response.data.choices[0].text);
 }
 handler.command = /^(ai)$/i
+handler.limit = true
+handler.premium = true
 
 module.exports = handler
